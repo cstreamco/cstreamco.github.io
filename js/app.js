@@ -185,6 +185,7 @@ function getMovie() {
         </div>
             `;
       document.querySelector(".container").innerHTML = output;
+      sessionStorage.setItem("type", movie.Type)
     })
     .catch(err => {
       console.log(err);
@@ -209,7 +210,14 @@ function file_get_contents(filename) {
 function openModal(movieId) {
   modal.style.display = "block";
   // import crawler.js
- videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;
+ let type = sessionStorage.getItem("type");
+  console.log(type);
+  if (type == "movie") {
+    videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;
+  } else {
+    videoframe.src = `https://vidsrc.to/embed/tv/${movieId}`;
+    
+  }
 }
 
 // CLOSING THE MODAL

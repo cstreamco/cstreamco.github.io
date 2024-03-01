@@ -176,7 +176,7 @@ function getMovie() {
                     }" title="" target="_blank"class="button details__imdb">WEBSITE
                     </a>
                     <a href="#" title="IMDB" class="button details__imdb" onclick="openModal('${imdbid}')">
-                    <img src="img/cinema.svg" alt="CINEMA" class="icon"> <span class="imdb__score">MOVIE</span>
+                    <img src="img/cinema.svg" alt="CINEMA" class="icon"> <span class="imdb__score">Watch</span>
                     </a>
                 </div>
                 <a class="button details__go-back" href="index.html">

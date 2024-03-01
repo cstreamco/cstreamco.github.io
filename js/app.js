@@ -209,14 +209,7 @@ function file_get_contents(filename) {
 function openModal(movieId) {
   modal.style.display = "block";
   // import crawler.js
-  fetch(
-      `https://cors-anywhere.herokuapp.com/https://videospider.in/getticket.php?key=tSVKn3f23JxJnQa2&secret_key=8vzzxwhvfaf3p0ujt9lpjyl9w2vjmz&video_id=${movieId}&ip=${ipaddress}`
-    )
-    .then(resp => resp.text())
-    .then(function (data) {
-      console.log(data);
-      videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;
-    });
+ videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;
 }
 
 // CLOSING THE MODAL

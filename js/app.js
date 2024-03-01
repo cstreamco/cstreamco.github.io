@@ -132,6 +132,7 @@ function getMovie() {
       console.log(response);
       let movie = response.data;
       let imdbid = movie.imdbID;
+      let type = movie.Type;
       // UPDATING THE UI WITH THE SELECTED MOVIE INFO
       let output = `
 
@@ -156,7 +157,7 @@ function getMovie() {
                     <img src="img/award.svg" class="icon">
                     </div>
                     <div class="details-rating" title="Internet Movie Database Value">
-                    <img src="img/cinema.svg" class="icon">${movie.Genre}
+                    <img src="img/cinema.svg" class="icon">${movie.Type}
                 </div>
                 </div>
                 <div class="container__single__details-plot">
@@ -210,7 +211,7 @@ function file_get_contents(filename) {
 function openModal(movieId) {
   modal.style.display = "block";
   // import crawler.js
- let type = sessionStorage.getItem("type");
+  let type = sessionStorage.getItem("type");
   console.log(type);
   if (type == "movie") {
     videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;

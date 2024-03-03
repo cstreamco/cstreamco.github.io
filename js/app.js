@@ -214,9 +214,9 @@ function openModal(movieId) {
   let type = sessionStorage.getItem("type");
   console.log(type);
   if (type == "movie") {
-    videoframe.src = `https://vidsrc.to/embed/movie/${movieId}`;
+    videoframe.src = `https://vidsrc.xyz/embed/movie/${movieId}`;
   } else {
-    videoframe.src = `https://vidsrc.to/embed/tv/${movieId}`;
+    videoframe.src = `https://vidsrc.xyz/embed/tv/${movieId}`;
     
   }
 }
